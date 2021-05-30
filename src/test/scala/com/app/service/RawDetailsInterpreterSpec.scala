@@ -3,9 +3,9 @@ package com.app.service
 import com.app.models.InvalidInput
 import org.specs2.mutable.Specification
 
-class DetailsInterpreterSpec extends Specification {
+class RawDetailsInterpreterSpec extends Specification {
 
-  "Details Interpreter" should {
+  "Raw Details InterpreterSpec" should {
 
     "process the valid data correctly" in {
       val inputFilePath = "src/test/resources/input/valid-input.csv";
