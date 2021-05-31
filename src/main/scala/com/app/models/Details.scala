@@ -1,6 +1,6 @@
 package com.app.models
 
-import com.app.models.Constants.{offerForRange, rangeA_To_E, rangeF_To_K, rangeL_To_R}
+import com.app.models.Constants.{A_to_E, F_to_K, L_to_R, OfferForRange}
 
 
 sealed trait Details
@@ -46,9 +46,9 @@ object ValidDetails {
     val isInRange = (range: Seq[Char]) => range.contains(fareClass)
 
     fareClass match {
-      case _ if isInRange(rangeA_To_E) => offerForRange(rangeA_To_E)
-      case _ if isInRange(rangeF_To_K) => offerForRange(rangeF_To_K)
-      case _ if isInRange(rangeL_To_R) => offerForRange(rangeL_To_R)
+      case _ if isInRange(A_to_E) => OfferForRange(A_to_E)
+      case _ if isInRange(F_to_K) => OfferForRange(F_to_K)
+      case _ if isInRange(L_to_R) => OfferForRange(L_to_R)
       case _ => ""
     }
   }
