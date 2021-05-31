@@ -2,11 +2,11 @@ package com.app.models
 
 trait Validator {
 
-  def validateEmail(details: Details): Either[Error, Details]
-  def validatePhoneNumber(details: Details): Either[Error, Details]
-  def validatePNR(details: Details): Either[Error, Details]
-  def validateCabin(details: Details): Either[Error, Details]
-  def validateDate(details: Details): Either[Error, Details]
+  def validateEmail(details: RawDetails): Either[Error, RawDetails]
+  def validatePhoneNumber(details: RawDetails): Either[Error, RawDetails]
+  def validatePNR(details: RawDetails): Either[Error, RawDetails]
+  def validateCabin(details: RawDetails): Either[Error, RawDetails]
+  def validateDate(details: RawDetails): Either[Error, RawDetails]
 
 
   def validate[A, B](obj: B, validations: ((B) => Either[A, B])*): Either[List[A], B] =
