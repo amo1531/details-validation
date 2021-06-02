@@ -23,4 +23,7 @@ object Constants {
     F_to_K -> OFFER_30,
     L_to_R -> OFFER_25
   )
+
+  val ValidDetailsPath = "src/test/resources/output/valid-details.csv"
+  val InvalidDetailsPath = "src/test/resources/output/invalid-details.csv"
 }

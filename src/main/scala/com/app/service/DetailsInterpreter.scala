@@ -1,8 +1,11 @@
 package com.app.service
 
+import com.app.models.Constants.{InvalidDetailsPath, ValidDetailsPath}
 import com.app.models.{Details, InvalidDetails, RawDetails, ValidDetails}
 import com.app.reader.Reader.ReadOperation
 import com.app.reader.syntax.ReaderImplementation.readFile
+import com.app.writer.Writer.WriteOperation
+import com.app.writer.syntax.WriterImplementation.{writeInValidRecords, writeValidRecords}
 
 class DetailsInterpreter {
 
@@ -18,8 +21,8 @@ class DetailsInterpreter {
 
     val detailsAfterValidation = ValidateDetails(details)
     val (validDetails, inValidDetails) = partitionValidatedDetails(detailsAfterValidation)
-//    validDetails.write(validInputPath)
-//    inValidDetails.write(inValidInputPath)
+    validDetails.write(ValidDetailsPath)
+    inValidDetails.write(InvalidDetailsPath)
     "Successfully processed records!"
   }
 
