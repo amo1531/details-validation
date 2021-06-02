@@ -20,7 +20,7 @@ object Constants {
 
   val OfferForRange = Map(
     A_to_E -> OFFER_20,
-    F_to_K -> OFFER_25,
-    L_to_R -> OFFER_30
+    F_to_K -> OFFER_30,
+    L_to_R -> OFFER_25
   )
 }
