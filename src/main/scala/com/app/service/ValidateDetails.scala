@@ -2,7 +2,7 @@ package com.app.service
 
 import com.app.models.{Details, InvalidDetails, RawDetails, ValidDetails}
 
-object ValidateDetails extends Validation {
+object ValidateDetails extends RawDetailsValidator {
 
   def apply(detailsList: Seq[RawDetails]): Seq[Details] = {
     detailsList map { detail =>

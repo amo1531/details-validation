@@ -24,6 +24,10 @@ case object InvalidCabin extends Error {
   override def errorMessage: String = "Invalid Cabin"
 }
 
+case object InvalidDateFormat extends Error {
+  override def errorMessage: String = "Invalid Date Format"
+}
+
 case object InvalidBookingDate extends Error {
   override def errorMessage: String = "Invalid Booking Date"
 }

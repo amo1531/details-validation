@@ -21,6 +21,4 @@ class DetailsInterpreterSpec extends Specification {
       actual mustEqual InvalidInput.errorMessage
     }
   }
-
 }
-//check if the files are written succesfully or not ?
